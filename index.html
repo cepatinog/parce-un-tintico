@@ -29,9 +29,10 @@
         <span class="visually-hidden">Abrir menú</span>
       </button>
       <ul class="nav__menu" id="nav-menu">
+        <li><a href="#tintico">¿Qué es un tintico?</a></li>
         <li><a href="#proyecto">El proyecto</a></li>
         <li><a href="#mapa">Mapa</a></li>
-        <li><a href="#galeria">Galería</a></li>
+        <li><a href="#cafes">Cafés</a></li>
         <li><a href="#equipo">Equipo</a></li>
         <li><a class="nav__cta" href="#inscribe">Inscribe tu café</a></li>
       </ul>
@@ -49,7 +50,7 @@
             <span class="logotype__tinto">¿un tintico?</span>
           </h1>
           <p class="hero__subtitle">Ruta de cafés culturales del Valle de Aburrá</p>
-          <p class="hero__lead">Recorre la ciudad, descubre emprendimientos cafeteros y vive la cultura paisa. Aquí encontrarás los cafés donde el tinto se toma con arte, música y buena conversación.</p>
+          <p class="hero__lead">En Medellín, «parce, ¿un tintico?» es la manera más sencilla de invitar a alguien a sentarse y conversar. Con esa misma invitación te proponemos recorrer los cafés culturales del Valle de Aburrá: lugares con música, libros, arte y emprendimientos cafeteros de la región.</p>
           <div class="hero__actions">
             <a class="btn btn--primary" href="#mapa">Ver el mapa</a>
             <a class="btn btn--ghost" href="#inscribe">Inscribir mi café</a>
@@ -65,6 +66,45 @@
           </div>
           <figcaption>Mira de qué se trata la ruta</figcaption>
         </figure>
+      </div>
+    </section>
+
+    <!-- ============ ¿QUÉ ES UN TINTICO? ============ -->
+    <section class="section tinto" id="tintico">
+      <div class="wrap tintico">
+        <div class="entrada">
+          <h2 class="entrada__palabra">tintico</h2>
+          <p class="entrada__meta"><span class="entrada__pron">/tin·ˈti·ko/</span> <em>sustantivo, coloquial, Colombia</em></p>
+          <ol class="entrada__defs">
+            <li>Taza de café negro, sin leche. Es el diminutivo cariñoso de <em>tinto</em>, como se llama al café solo en Colombia.</li>
+            <li>Invitación a hacer una pausa y conversar. «Parce, ¿un tintico?» quiere decir algo como «amigo, ¿nos tomamos un café?».</li>
+          </ol>
+          <p class="entrada__nota"><em>Parce</em> viene de <em>parcero</em>: en Medellín, amigo o compañero. Y <em>tinto</em> viene del latín <em>tinctus</em>, «teñido», por el color oscuro de la bebida.</p>
+        </div>
+
+        <div class="otros">
+          <h3>La misma palabra, otra bebida</h3>
+          <p class="otros__intro">Si no eres de aquí, «tinto» puede despistarte. Según dónde lo pidas, te pueden servir algo muy distinto:</p>
+          <dl class="otros__lista">
+            <div>
+              <dt>Colombia y Ecuador</dt>
+              <dd>Café negro. Pide «un tinto» y te sirven una taza de café solo.</dd>
+            </div>
+            <div>
+              <dt>España</dt>
+              <dd>Vino tinto. «Un tinto» en un bar es una copa de vino, y el <em>tinto de verano</em> es vino tinto con gaseosa de limón.</dd>
+            </div>
+            <div>
+              <dt>Argentina, Chile y otros países</dt>
+              <dd>También vino tinto. Para el café se dice <em>café solo</em>, <em>café negro</em> o simplemente <em>café</em>.</dd>
+            </div>
+            <div>
+              <dt>Venezuela</dt>
+              <dd>Se usa para hablar del café, sobre todo cuando es negro y bien cargado.</dd>
+            </div>
+          </dl>
+          <p class="otros__en" lang="en"><strong>For visitors:</strong> in Colombia a <em>tinto</em> is a cup of black coffee, not red wine. <em>Tintico</em> is its affectionate diminutive, and «parce, ¿un tintico?» means roughly “hey friend, fancy a coffee?”, the everyday way to invite someone to sit down and talk.</p>
+        </div>
       </div>
     </section>
 
@@ -121,29 +161,63 @@
       </div>
     </section>
 
-    <!-- ============ GALERÍA + TESTIMONIOS ============ -->
-    <section class="section paper" id="galeria">
+    <!-- ============ CAFÉS DE LA RUTA + TESTIMONIOS ============ -->
+    <section class="section paper" id="cafes">
       <div class="wrap">
-        <div class="galeria__head">
-          <h2>Así se ve un buen tinto</h2>
-          <p class="note">Fotos de muestra. Pronto publicaremos las de los cafés de la ruta.</p>
+        <div class="cafes__head">
+          <h2>Algunos cafés de la ruta</h2>
+          <p>Una muestra de los lugares que están en el mapa. Toca el nombre de cada uno para ver su Instagram.</p>
         </div>
 
-        <div class="gallery">
-          <!-- FOTOS DE MUESTRA (Pexels). Reemplázalas por assets/img/galeria-01.jpg, etc. -->
-          <figure class="gallery__item gallery__item--big">
-            <img src="https://images.pexels.com/photos/28921091/pexels-photo-28921091.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Interior de un café con mesas de madera" loading="lazy">
-          </figure>
-          <figure class="gallery__item">
-            <img src="https://images.pexels.com/photos/13869902/pexels-photo-13869902.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Taza de café sobre una mesa" loading="lazy">
-          </figure>
-          <figure class="gallery__item">
-            <img src="https://images.pexels.com/photos/19095244/pexels-photo-19095244.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Barra de un café de especialidad" loading="lazy">
-          </figure>
-          <a class="gallery__cta" href="#inscribe">
-            <span class="gallery__cta-title">¿Tu café debería estar aquí?</span>
-            <span class="gallery__cta-text">Inscríbelo y lo sumamos a la ruta.</span>
-          </a>
+        <ul class="cafes">
+          <!-- Fotos de los sitios web oficiales de cada café, con crédito. -->
+          <li class="cafe cafe--foto">
+            <figure class="cafe__foto">
+              <img src="https://www.otraparte.org/wp-content/uploads/seccion-el-cafe-de-otraparte-1-1024x576.webp" alt="El Café de Otraparte, en Envigado" width="1024" height="576" loading="lazy" referrerpolicy="no-referrer">
+              <figcaption>Foto: <a href="https://www.otraparte.org/cafe/" target="_blank" rel="noopener">Corporación Otraparte</a></figcaption>
+            </figure>
+            <div class="cafe__texto">
+              <h3><a href="https://www.instagram.com/elcafedeotraparte/" target="_blank" rel="noopener">El Café de Otraparte</a></h3>
+              <p class="cafe__lugar">Envigado</p>
+              <p>Literatura, pensamiento, arte y patrimonio en la casa museo del escritor Fernando González.</p>
+            </div>
+          </li>
+          <li class="cafe cafe--foto">
+            <figure class="cafe__foto">
+              <img src="https://ateneomedellin.com/wp-content/uploads/2019/02/caf%C3%A9-del-porfirio.jpg" alt="El Café del Porfirio, en el Ateneo Porfirio Barba Jacob" width="795" height="597" loading="lazy" referrerpolicy="no-referrer">
+              <figcaption>Foto: <a href="https://ateneomedellin.com/cafe-bar/" target="_blank" rel="noopener">Corporación Ateneo Porfirio Barba Jacob</a></figcaption>
+            </figure>
+            <div class="cafe__texto">
+              <h3><a href="https://www.instagram.com/ateneomedellin/" target="_blank" rel="noopener">Café Porfirio, Ateneo</a></h3>
+              <p class="cafe__lugar">La Candelaria, Medellín</p>
+              <p>Teatro, galería y programación cultural alrededor de la mesa del café.</p>
+            </div>
+          </li>
+          <li class="cafe">
+            <h3><a href="https://www.instagram.com/indeleblecafecultural/" target="_blank" rel="noopener">Indeleble Café Cultural</a></h3>
+            <p class="cafe__lugar">Centro, Medellín</p>
+            <p>Música, encuentros y programación cultural. Un lugar para quedarse a conversar y escuchar.</p>
+          </li>
+          <li class="cafe">
+            <h3><a href="https://www.instagram.com/acontistacafelibrosrestaurante/" target="_blank" rel="noopener">El Acontista</a></h3>
+            <p class="cafe__lugar">Centro, Medellín</p>
+            <p>Librería y cafetería con tertulias. Un clásico del centro para leer y conversar.</p>
+          </li>
+          <li class="cafe">
+            <h3><a href="https://www.instagram.com/cafexlibris/" target="_blank" rel="noopener">Exlibris Café Libros</a></h3>
+            <p class="cafe__lugar">Carlos E. Restrepo, Medellín</p>
+            <p>Librería y café para el encuentro literario, un rincón para quienes aman los libros.</p>
+          </li>
+          <li class="cafe">
+            <h3><a href="https://www.instagram.com/eclectica_arte/" target="_blank" rel="noopener">Ecléctica</a></h3>
+            <p class="cafe__lugar">Centro, Bello</p>
+            <p>Arte, libros, música y teatro en un espacio cultural con mucho carácter.</p>
+          </li>
+        </ul>
+
+        <div class="cafes__mas">
+          <a class="btn btn--primary" href="#mapa">Ver los 24 cafés en el mapa</a>
+          <a class="cafes__inscribe" href="#inscribe">¿Falta tu café? Inscríbelo</a>
         </div>
 
         <div class="testimonio">

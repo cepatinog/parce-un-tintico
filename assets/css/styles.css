@@ -139,7 +139,7 @@ p { margin: 0 0 1em; }
 .nav__menu .nav__cta:hover { background: var(--kraft); color: var(--tinto); }
 .nav__toggle { display: none; }
 
-@media (max-width: 820px) {
+@media (max-width: 1060px) {
   .nav__toggle {
     display: grid; place-items: center; width: 2.75rem; height: 2.75rem;
     background: none; border: 0; color: inherit; cursor: pointer;
@@ -279,38 +279,82 @@ p { margin: 0 0 1em; }
   .mapa__full { text-align: left; }
 }
 
-/* ---------- Galería ---------- */
-.galeria__head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: .5rem 2rem; margin-bottom: 2rem; }
-.note { font-style: italic; color: var(--arabica); margin: 0; }
-.gallery {
-  display: grid; gap: .9rem;
-  grid-template-columns: 1.6fr 1fr 1fr;
-  grid-template-rows: repeat(2, minmax(13rem, 17rem));
+/* ---------- ¿Qué es un tintico? ---------- */
+.tintico { display: grid; grid-template-columns: 1fr 1.15fr; gap: clamp(2.5rem, 6vw, 6rem); align-items: start; }
+.entrada__palabra {
+  font-family: var(--font-display); font-weight: 900;
+  font-size: clamp(4rem, 2rem + 8vw, 7.5rem); line-height: .9; color: var(--kraft);
 }
-.gallery__item { margin: 0; border-radius: var(--radius); overflow: hidden; background: var(--kraft); position: relative; }
-.gallery__item--big { grid-row: span 2; }
-.gallery__item img { width: 100%; height: 100%; object-fit: cover; }
-.gallery__item.is-missing img { display: none; }
-.gallery__item.is-missing::after {
+.entrada__meta { margin: .8rem 0 1.6rem; color: rgba(242,232,215,.75); }
+.entrada__pron { margin-right: .6rem; }
+.entrada__defs { margin: 0 0 1.6rem; padding-left: 1.6rem; display: grid; gap: .9rem; font-size: var(--step-1); line-height: 1.45; }
+.entrada__defs li::marker { font-family: var(--font-display); font-weight: 700; color: var(--kraft); }
+.entrada__nota {
+  margin: 0; padding-top: 1.2rem; border-top: 1.5px solid rgba(205,176,138,.3);
+  color: rgba(242,232,215,.85); max-width: 34rem;
+}
+.otros h3 { color: var(--kraft); margin-bottom: .8rem; }
+.otros__intro { color: rgba(242,232,215,.85); max-width: 36rem; }
+.otros__lista { margin: 1.4rem 0 0; }
+.otros__lista > div {
+  display: grid; grid-template-columns: 11rem 1fr; gap: .3rem 1.5rem;
+  padding: 1rem 0; border-top: 1.5px solid rgba(205,176,138,.25);
+}
+.otros__lista dt { font-family: var(--font-display); font-weight: 700; font-size: 1.35rem; line-height: 1.15; color: var(--filtro); }
+.otros__lista dd { margin: 0; color: rgba(242,232,215,.88); }
+.otros__en {
+  margin: 1.6rem 0 0; padding: 1.1rem 1.3rem; border-radius: var(--radius);
+  background: var(--tinto-2); border-left: 4px solid var(--cereza);
+  font-size: 1.05rem; color: rgba(242,232,215,.92);
+}
+.otros__en strong { color: var(--kraft); }
+@media (max-width: 900px) { .tintico { grid-template-columns: 1fr; } }
+@media (max-width: 520px) { .otros__lista > div { grid-template-columns: 1fr; } }
+
+/* ---------- Cafés de la ruta ---------- */
+.cafes__head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: .5rem 2rem; margin-bottom: 2rem; }
+.cafes__head p { margin: 0; max-width: 32rem; color: var(--arabica); font-style: italic; }
+.cafes { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; }
+.cafe {
+  background-color: var(--kraft);
+  background-image:
+    repeating-linear-gradient(0deg, rgba(43,24,16,.045) 0 1px, transparent 1px 5px),
+    repeating-linear-gradient(90deg, rgba(43,24,16,.04) 0 1px, transparent 1px 5px);
+  border-radius: var(--radius); padding: 1.3rem 1.3rem 1.4rem;
+  display: flex; flex-direction: column;
+}
+.cafe h3 { font-size: 1.6rem; line-height: 1.05; }
+.cafe h3 a { text-decoration: none; }
+.cafe h3 a:hover { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: .15em; }
+.cafe__lugar { font-style: italic; color: var(--arabica); margin: .3rem 0 .7rem; font-size: 1rem; }
+.cafe p:last-child { margin: 0; font-size: 1.02rem; line-height: 1.5; }
+
+.cafe--foto { grid-column: span 2; padding: 0; overflow: hidden; background: var(--tinto); color: var(--filtro); }
+.cafe--foto .cafe__lugar { color: var(--kraft); }
+.cafe__foto { margin: 0; position: relative; aspect-ratio: 16 / 9; background: var(--tinto-2); }
+.cafe__foto img { width: 100%; height: 100%; object-fit: cover; }
+.cafe__foto figcaption {
+  position: absolute; right: .5rem; bottom: .5rem; font-size: .78rem;
+  background: rgba(43,24,16,.78); color: var(--filtro); padding: .15rem .55rem; border-radius: 999px;
+}
+.cafe__foto figcaption a { color: inherit; }
+.cafe__foto.is-missing img { display: none; }
+.cafe__foto.is-missing::after {
   content: "Foto próximamente"; position: absolute; inset: 0; display: grid; place-items: center;
-  font-style: italic; color: var(--arabica);
+  font-style: italic; color: var(--kraft);
 }
-.gallery__cta {
-  grid-column: span 2; border-radius: var(--radius); text-decoration: none;
-  background: var(--cereza); color: #fff; padding: 1.6rem 1.8rem;
-  display: flex; flex-direction: column; justify-content: flex-end;
-}
-.gallery__cta-title { font-family: var(--font-display); font-weight: 900; font-size: var(--step-2); line-height: 1.05; }
-.gallery__cta-text { margin-top: .3rem; }
-.gallery__cta:hover { background: #8A1826; }
+.cafe__texto { padding: 1.2rem 1.4rem 1.4rem; }
 
-@media (max-width: 760px) {
-  .gallery { grid-template-columns: 1fr 1fr; grid-template-rows: auto; grid-auto-rows: 11rem; }
-  .gallery__item--big { grid-column: span 2; grid-row: auto; height: 16rem; }
-  .gallery__cta { grid-column: span 2; }
+.cafes__mas { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 2rem; margin-top: 2rem; }
+.cafes__inscribe { color: var(--cereza); font-size: 1.1rem; text-underline-offset: .2em; }
+
+@media (max-width: 980px) { .cafes { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) {
+  .cafes { grid-template-columns: 1fr; }
+  .cafe--foto { grid-column: auto; }
 }
 
-.testimonio { margin-top: clamp(3rem, 6vw, 5rem); display: grid; grid-template-columns: 1fr 2fr; gap: 1rem 3rem; align-items: start; }
+.testimonio { margin-top: clamp(3.5rem, 7vw, 6rem); display: grid; grid-template-columns: 1fr 2fr; gap: 1rem 3rem; align-items: start; }
 .testimonio h3 { max-width: 10ch; }
 .testimonio blockquote { margin: 0; padding-left: 1.5rem; border-left: 4px solid var(--kraft-2); }
 .testimonio blockquote p { font-style: italic; font-size: clamp(1.35rem, 1.1rem + 1vw, 1.75rem); line-height: 1.4; margin-bottom: .75rem; }

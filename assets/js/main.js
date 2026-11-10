@@ -39,9 +39,9 @@ mapFrame?.querySelector(".map-shield")?.addEventListener("click", () => {
   mapFrame.classList.add("is-active");
 });
 
-/* ---------- Galería: si una foto no carga, deja un espacio digno ---------- */
-document.querySelectorAll(".gallery__item img").forEach((img) => {
-  const markMissing = () => img.closest(".gallery__item").classList.add("is-missing");
+/* ---------- Fotos de cafés: si una no carga, deja un espacio digno ---------- */
+document.querySelectorAll(".cafe__foto img").forEach((img) => {
+  const markMissing = () => img.closest(".cafe__foto").classList.add("is-missing");
   if (img.complete && img.naturalWidth === 0) markMissing();
   img.addEventListener("error", markMissing);
 });
