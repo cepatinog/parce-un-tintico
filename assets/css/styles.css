@@ -314,45 +314,38 @@ p { margin: 0 0 1em; }
 /* ---------- Cafés de la ruta ---------- */
 .cafes__head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: .5rem 2rem; margin-bottom: 2rem; }
 .cafes__head p { margin: 0; max-width: 32rem; color: var(--arabica); font-style: italic; }
-.cafes { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; }
+.cafes { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(1rem, 2vw, 1.5rem); }
 .cafe {
-  background-color: var(--kraft);
-  background-image:
-    repeating-linear-gradient(0deg, rgba(43,24,16,.045) 0 1px, transparent 1px 5px),
-    repeating-linear-gradient(90deg, rgba(43,24,16,.04) 0 1px, transparent 1px 5px);
-  border-radius: var(--radius); padding: 1.3rem 1.3rem 1.4rem;
-  display: flex; flex-direction: column;
+  display: flex; flex-direction: column; overflow: hidden;
+  background: #FBF6EE; border-radius: var(--radius);
+  box-shadow: 0 0 0 1px rgba(107,66,38,.18);
 }
-.cafe h3 { font-size: 1.6rem; line-height: 1.05; }
-.cafe h3 a { text-decoration: none; }
-.cafe h3 a:hover { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: .15em; }
-.cafe__lugar { font-style: italic; color: var(--arabica); margin: .3rem 0 .7rem; font-size: 1rem; }
-.cafe p:last-child { margin: 0; font-size: 1.02rem; line-height: 1.5; }
-
-.cafe--foto { grid-column: span 2; padding: 0; overflow: hidden; background: var(--tinto); color: var(--filtro); }
-.cafe--foto .cafe__lugar { color: var(--kraft); }
-.cafe__foto { margin: 0; position: relative; aspect-ratio: 16 / 9; background: var(--tinto-2); }
-.cafe__foto img { width: 100%; height: 100%; object-fit: cover; }
-.cafe__foto figcaption {
-  position: absolute; right: .5rem; bottom: .5rem; font-size: .78rem;
-  background: rgba(43,24,16,.78); color: var(--filtro); padding: .15rem .55rem; border-radius: 999px;
+.cafe__foto { margin: 0; position: relative; aspect-ratio: 3 / 2; background: var(--kraft); overflow: hidden; }
+.cafe__foto img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.cafe__tag {
+  position: absolute; left: .6rem; bottom: .6rem; max-width: calc(100% - 1.2rem);
+  background: rgba(43,24,16,.82); color: var(--filtro);
+  font-size: .8rem; line-height: 1.3; padding: .2rem .65rem; border-radius: 999px;
 }
-.cafe__foto figcaption a { color: inherit; }
 .cafe__foto.is-missing img { display: none; }
 .cafe__foto.is-missing::after {
   content: "Foto próximamente"; position: absolute; inset: 0; display: grid; place-items: center;
-  font-style: italic; color: var(--kraft);
+  font-style: italic; color: var(--arabica);
 }
-.cafe__texto { padding: 1.2rem 1.4rem 1.4rem; }
+.cafe__texto { padding: 1rem 1.2rem 1.1rem; display: flex; flex-direction: column; flex: 1; }
+.cafe h3 { font-size: 1.55rem; line-height: 1.05; }
+.cafe h3 a { text-decoration: none; }
+.cafe h3 a:hover { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: .15em; }
+.cafe__lugar { font-style: italic; color: var(--cereza); margin: .25rem 0 .55rem; font-size: 1rem; }
+.cafe__desc { margin: 0 0 .9rem; font-size: 1.02rem; line-height: 1.5; }
+.cafe__credito { margin: auto 0 0; font-size: .78rem; color: var(--arabica); }
+.cafe__credito a { color: inherit; }
 
 .cafes__mas { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 2rem; margin-top: 2rem; }
 .cafes__inscribe { color: var(--cereza); font-size: 1.1rem; text-underline-offset: .2em; }
 
-@media (max-width: 980px) { .cafes { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (max-width: 600px) {
-  .cafes { grid-template-columns: 1fr; }
-  .cafe--foto { grid-column: auto; }
-}
+@media (max-width: 960px) { .cafes { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) { .cafes { grid-template-columns: 1fr; } }
 
 .testimonio { margin-top: clamp(3.5rem, 7vw, 6rem); display: grid; grid-template-columns: 1fr 2fr; gap: 1rem 3rem; align-items: start; }
 .testimonio h3 { max-width: 10ch; }

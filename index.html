@@ -170,48 +170,78 @@
         </div>
 
         <ul class="cafes">
-          <!-- Fotos de los sitios web oficiales de cada café, con crédito. -->
-          <li class="cafe cafe--foto">
+          <!-- Fotos: sitio oficial del café cuando existe; si no, foto del sector con licencia libre (Wikimedia Commons). -->
+          <li class="cafe">
             <figure class="cafe__foto">
-              <img src="https://www.otraparte.org/wp-content/uploads/seccion-el-cafe-de-otraparte-1-1024x576.webp" alt="El Café de Otraparte, en Envigado" width="1024" height="576" loading="lazy" referrerpolicy="no-referrer">
-              <figcaption>Foto: <a href="https://www.otraparte.org/cafe/" target="_blank" rel="noopener">Corporación Otraparte</a></figcaption>
+              <img src="https://www.otraparte.org/wp-content/uploads/seccion-el-cafe-de-otraparte-1-1024x576.webp" alt="El Café de Otraparte, en Envigado" loading="lazy" referrerpolicy="no-referrer">
+              <span class="cafe__tag">El café</span>
             </figure>
             <div class="cafe__texto">
               <h3><a href="https://www.instagram.com/elcafedeotraparte/" target="_blank" rel="noopener">El Café de Otraparte</a></h3>
               <p class="cafe__lugar">Envigado</p>
-              <p>Literatura, pensamiento, arte y patrimonio en la casa museo del escritor Fernando González.</p>
+              <p class="cafe__desc">Literatura, pensamiento, arte y patrimonio en la casa museo del escritor Fernando González.</p>
+              <p class="cafe__credito">Foto: <a href="https://www.otraparte.org/cafe/" target="_blank" rel="noopener">Corporación Otraparte</a></p>
             </div>
           </li>
-          <li class="cafe cafe--foto">
+          <li class="cafe">
             <figure class="cafe__foto">
-              <img src="https://ateneomedellin.com/wp-content/uploads/2019/02/caf%C3%A9-del-porfirio.jpg" alt="El Café del Porfirio, en el Ateneo Porfirio Barba Jacob" width="795" height="597" loading="lazy" referrerpolicy="no-referrer">
-              <figcaption>Foto: <a href="https://ateneomedellin.com/cafe-bar/" target="_blank" rel="noopener">Corporación Ateneo Porfirio Barba Jacob</a></figcaption>
+              <img src="https://ateneomedellin.com/wp-content/uploads/2019/02/caf%C3%A9-del-porfirio.jpg" alt="El Café del Porfirio, en el Ateneo Porfirio Barba Jacob" loading="lazy" referrerpolicy="no-referrer">
+              <span class="cafe__tag">El café</span>
             </figure>
             <div class="cafe__texto">
               <h3><a href="https://www.instagram.com/ateneomedellin/" target="_blank" rel="noopener">Café Porfirio, Ateneo</a></h3>
               <p class="cafe__lugar">La Candelaria, Medellín</p>
-              <p>Teatro, galería y programación cultural alrededor de la mesa del café.</p>
+              <p class="cafe__desc">Teatro, galería y programación cultural alrededor de la mesa del café.</p>
+              <p class="cafe__credito">Foto: <a href="https://ateneomedellin.com/cafe-bar/" target="_blank" rel="noopener">Corporación Ateneo Porfirio Barba Jacob</a></p>
             </div>
           </li>
           <li class="cafe">
-            <h3><a href="https://www.instagram.com/indeleblecafecultural/" target="_blank" rel="noopener">Indeleble Café Cultural</a></h3>
-            <p class="cafe__lugar">Centro, Medellín</p>
-            <p>Música, encuentros y programación cultural. Un lugar para quedarse a conversar y escuchar.</p>
+            <figure class="cafe__foto">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/2018_Medell%C3%ADn_casa_en_la_carrera_42%2C_cerca_de_la_avenida_La_Playa.jpg/960px-2018_Medell%C3%ADn_casa_en_la_carrera_42%2C_cerca_de_la_avenida_La_Playa.jpg" alt="Casa en la carrera 42, cerca de la avenida La Playa, en el centro de Medellín" loading="lazy" referrerpolicy="no-referrer">
+              <span class="cafe__tag">El sector: carrera 42</span>
+            </figure>
+            <div class="cafe__texto">
+              <h3><a href="https://www.instagram.com/indeleblecafecultural/" target="_blank" rel="noopener">Indeleble Café Cultural</a></h3>
+              <p class="cafe__lugar">Centro, Medellín</p>
+              <p class="cafe__desc">Música, encuentros y programación cultural. Un lugar para quedarse a conversar y escuchar.</p>
+              <p class="cafe__credito">Foto: <a href="https://commons.wikimedia.org/wiki/File:2018_Medell%C3%ADn_casa_en_la_carrera_42,_cerca_de_la_avenida_La_Playa.jpg" target="_blank" rel="noopener">Felipe Restrepo Acosta</a>, CC BY-SA 4.0</p>
+            </div>
           </li>
           <li class="cafe">
-            <h3><a href="https://www.instagram.com/acontistacafelibrosrestaurante/" target="_blank" rel="noopener">El Acontista</a></h3>
-            <p class="cafe__lugar">Centro, Medellín</p>
-            <p>Librería y cafetería con tertulias. Un clásico del centro para leer y conversar.</p>
+            <figure class="cafe__foto">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/2018_Medell%C3%ADn_Teatro_Pablo_Tob%C3%B3n_Uribe.jpg/960px-2018_Medell%C3%ADn_Teatro_Pablo_Tob%C3%B3n_Uribe.jpg" alt="Teatro Pablo Tobón Uribe, en el centro de Medellín" loading="lazy" referrerpolicy="no-referrer">
+              <span class="cafe__tag">Cerca: Teatro Pablo Tobón</span>
+            </figure>
+            <div class="cafe__texto">
+              <h3><a href="https://www.instagram.com/acontistacafelibrosrestaurante/" target="_blank" rel="noopener">El Acontista</a></h3>
+              <p class="cafe__lugar">Centro, Medellín</p>
+              <p class="cafe__desc">Librería y cafetería con tertulias. Un clásico del centro para leer y conversar.</p>
+              <p class="cafe__credito">Foto: <a href="https://commons.wikimedia.org/wiki/File:2018_Medell%C3%ADn_Teatro_Pablo_Tob%C3%B3n_Uribe.jpg" target="_blank" rel="noopener">Felipe Restrepo Acosta</a>, CC BY-SA 4.0</p>
+            </div>
           </li>
           <li class="cafe">
-            <h3><a href="https://www.instagram.com/cafexlibris/" target="_blank" rel="noopener">Exlibris Café Libros</a></h3>
-            <p class="cafe__lugar">Carlos E. Restrepo, Medellín</p>
-            <p>Librería y café para el encuentro literario, un rincón para quienes aman los libros.</p>
+            <figure class="cafe__foto">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Biblioteca_P%C3%BAblica_Piloto_-_Entrada_principal_-_Medellin_1.jpg/960px-Biblioteca_P%C3%BAblica_Piloto_-_Entrada_principal_-_Medellin_1.jpg" alt="Entrada de la Biblioteca Pública Piloto, en Carlos E. Restrepo" loading="lazy" referrerpolicy="no-referrer">
+              <span class="cafe__tag">El barrio: Biblioteca Piloto</span>
+            </figure>
+            <div class="cafe__texto">
+              <h3><a href="https://www.instagram.com/cafexlibris/" target="_blank" rel="noopener">Exlibris Café Libros</a></h3>
+              <p class="cafe__lugar">Carlos E. Restrepo, Medellín</p>
+              <p class="cafe__desc">Librería y café para el encuentro literario, en el barrio de la Biblioteca Pública Piloto.</p>
+              <p class="cafe__credito">Foto: <a href="https://commons.wikimedia.org/wiki/File:Biblioteca_P%C3%BAblica_Piloto_-_Entrada_principal_-_Medellin_1.jpg" target="_blank" rel="noopener">Alejandro Rojas (SajoR)</a>, CC BY-SA 4.0</p>
+            </div>
           </li>
           <li class="cafe">
-            <h3><a href="https://www.instagram.com/eclectica_arte/" target="_blank" rel="noopener">Ecléctica</a></h3>
-            <p class="cafe__lugar">Centro, Bello</p>
-            <p>Arte, libros, música y teatro en un espacio cultural con mucho carácter.</p>
+            <figure class="cafe__foto">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Panoramica_de_la_iglesia_nuestra_se%C3%B1ora_del_rosario_y_del_parque_Santander.jpg/960px-Panoramica_de_la_iglesia_nuestra_se%C3%B1ora_del_rosario_y_del_parque_Santander.jpg" alt="Parque Santander e iglesia de Nuestra Señora del Rosario, en el centro de Bello" loading="lazy" referrerpolicy="no-referrer">
+              <span class="cafe__tag">El sector: Parque Santander</span>
+            </figure>
+            <div class="cafe__texto">
+              <h3><a href="https://www.instagram.com/eclectica_arte/" target="_blank" rel="noopener">Ecléctica</a></h3>
+              <p class="cafe__lugar">Centro, Bello</p>
+              <p class="cafe__desc">Arte, libros, música y teatro en un espacio cultural con mucho carácter.</p>
+              <p class="cafe__credito">Foto: <a href="https://commons.wikimedia.org/wiki/File:Panoramica_de_la_iglesia_nuestra_se%C3%B1ora_del_rosario_y_del_parque_Santander.jpg" target="_blank" rel="noopener">Mateo Fdz</a>, CC BY-SA 4.0</p>
+            </div>
           </li>
         </ul>
 

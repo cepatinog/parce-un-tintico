@@ -35,7 +35,7 @@ Requisito: en My Maps → *Compartir*, el mapa debe estar como **"Cualquier pers
 
 ## Cambiar contenidos
 
-- **Cafés de la ruta (sección `#cafes`):** seis cafés del mapa con su descripción e Instagram. Dos llevan foto enlazada desde el sitio web oficial del café (Otraparte y Ateneo), con crédito. Para usar fotos propias, guárdalas en `assets/img/` (unos 1200 px de ancho) y cambia el `src` del `<img>` y el crédito. Para que un café sin foto la tenga, copia el bloque `<li class="cafe cafe--foto">`.
+- **Cafés de la ruta (sección `#cafes`):** seis cafés del mapa en tarjetas iguales. Otraparte y el Ateneo usan una foto de su sitio oficial; los demás, una foto del sector con licencia libre de Wikimedia Commons (con autor y licencia, como exige la licencia CC BY-SA). Para poner fotos propias, guárdalas en `assets/img/` (unos 1200 px de ancho, horizontales) y cambia el `src`, la etiqueta `cafe__tag` y el crédito.
 - **Testimonios:** en la sección `#galeria`, bloque `.testimonio`. Ahora hay uno de ejemplo marcado como tal.
 - **Equipo:** sección `#equipo`. Las fotos van a 640 × 800 px (proporción 4:5).
 - **Colores:** variables al inicio de `styles.css` (`--tinto`, `--kraft`, `--filtro`, `--cereza`…).

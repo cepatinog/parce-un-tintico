@@ -101,17 +101,30 @@ if (form) {
         body: JSON.stringify(data),
       });
       const json = await res.json().catch(() => ({}));
-      if (!res.ok || String(json.success) !== "true") throw new Error(json.message || res.status);
+      if (!res.ok || String(json.success) !== "true") {
+        const err = new Error(json.message || `HTTP ${res.status}`);
+        err.serverMessage = json.message || "";
+        throw err;
+      }
 
       const email = data.email;
       form.reset();
       setStatus(`Inscripción enviada. Te escribiremos pronto a ${email}.`, "ok");
     } catch (err) {
       console.error("Formulario:", err);
-      setStatus(
-        `No pudimos enviar la inscripción. Revisa tu conexión e inténtalo de nuevo, o escríbenos a ${CONTACT_EMAIL}.`,
-        "error"
-      );
+      const msg = (err.serverMessage || "").toLowerCase();
+      if (msg.includes("activat") || msg.includes("activ")) {
+        // FormSubmit aún no está activado para este correo
+        setStatus(
+          `El formulario todavía no está activado. Mientras tanto, escríbenos a ${CONTACT_EMAIL}.`,
+          "error"
+        );
+      } else {
+        setStatus(
+          `No pudimos enviar la inscripción. Inténtalo de nuevo en unos minutos o escríbenos a ${CONTACT_EMAIL}.`,
+          "error"
+        );
+      }
     } finally {
       submit.disabled = false;
       submit.textContent = "Enviar inscripción";
